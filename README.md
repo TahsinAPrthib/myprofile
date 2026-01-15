@@ -8,7 +8,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - 📱 Fully responsive layout
 - ⚡ Fast and optimized with Next.js
 - 🎭 Smooth animations with Framer Motion
-- 🎯 Sections for About, Skills, Projects, and Contact
+- 🎯 Sections for About, Skills, Projects, Achievements, and Contact
 - 📧 Contact form
 - 🌈 Gradient effects and modern styling
 
@@ -35,32 +35,37 @@ npm run dev
 
 ## Customization
 
+### Add Your Profile Picture
+
+1. Place your profile picture in the `public` folder
+2. Name it `profile.jpg` (or update the image paths in `components/Navbar.tsx` and `components/About.tsx`)
+3. Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
+4. Recommended size: 400x400 pixels or larger (square image works best)
+
 ### Update Your Information
 
 1. **Hero Section** (`components/Hero.tsx`):
-   - Change "Your Name" to your actual name
-   - Update the tagline/description
+   - Change your name and tagline
 
 2. **About Section** (`components/About.tsx`):
-   - Update the "Who I Am" content
-   - Modify "What I Do" and "What I Want To Do" lists
+   - Update your bio and what you do
 
 3. **Skills Section** (`components/Skills.tsx`):
    - Update skill categories and proficiency levels
-   - Add or remove skills as needed
 
 4. **Projects Section** (`components/Projects.tsx`):
    - Replace placeholder projects with your actual projects
    - Update project links (GitHub, live demos)
-   - Modify technologies used
 
-5. **Contact Section** (`components/Contact.tsx`):
+5. **Achievements Section** (`components/Achievements.tsx`):
+   - Add your achievements and accomplishments
+
+6. **Contact Section** (`components/Contact.tsx`):
    - Update email, phone, and location
-   - Add your social media links
-   - Connect the form to a backend service (optional)
+   - Add your social media links (LinkedIn, GitHub, Codeforces, etc.)
 
-6. **Metadata** (`app/layout.tsx`):
-   - Update the title and description in the metadata
+7. **Metadata** (`app/layout.tsx`):
+   - Update the title and description
 
 ## Build for Production
 
@@ -80,5 +85,3 @@ npm start
 ## License
 
 This project is open source and available under the MIT License.
-
-# myprofile
