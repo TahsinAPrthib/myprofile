@@ -5,33 +5,31 @@ import { motion } from 'framer-motion'
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Red Team Basics',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'JavaScript', level: 95 },
+        { name: 'Recon & Enumeration', level: 50 },
+        { name: 'Web App Weaknesses (OWASP)', level: 45 },
+        { name: 'Linux Privilege Escalation (Labs)', level: 40 },
+        { name: 'Password & Brute Force Basics', level: 40 },
       ],
     },
     {
-      title: 'Backend',
+      title: 'Tools & Platforms',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'Express', level: 85 },
-        { name: 'REST APIs', level: 90 },
-        { name: 'Database Design', level: 75 },
+        { name: 'Kali Linux', level: 50 },
+        { name: 'Nmap', level: 50 },
+        { name: 'Burp Suite (Basics)', level: 40 },
+        { name: 'TryHackMe', level: 60 },
+        { name: 'Hack The Box', level: 45 },
       ],
     },
     {
-      title: 'Tools & Others',
+      title: 'Programming & Scripting',
       skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'CI/CD', level: 75 },
-        { name: 'Testing', level: 80 },
+        { name: 'Python (small scripts)', level: 45 },
+        { name: 'Bash & Linux CLI', level: 50 },
+        { name: 'JavaScript / Web Basics', level: 55 },
+        { name: 'Note-taking & Reporting', level: 60 },
       ],
     },
   ]
@@ -51,7 +49,7 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Technologies and tools I work with to bring ideas to life
+            Foundations, tools, and platforms I&apos;m using to build my red team skillset
           </p>
         </motion.div>
 

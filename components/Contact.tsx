@@ -28,9 +28,11 @@ const Contact = () => {
   const socialLinks = [
     { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/tahsin-a-parthib-b16723343/' },
     { name: 'GitHub', icon: '🐙', url: 'https://github.com/TahsinAPrthib' },
+    { name: 'TryHackMe', icon: '🧪', url: 'https://tryhackme.com/p/tahsinaparthib1' },
+    { name: 'Hack The Box', icon: '📦', url: 'https://app.hackthebox.com/profile/tahsinaparthib' },
     { name: 'Codeforces', icon: '⚔️', url: 'https://codeforces.com/profile/Tahsin-A-Parthib' },
     { name: 'Twitter', icon: '🐦', url: 'https://x.com/tahsin_parthib' },
-    { name: 'Email', icon: '📧', url: 'tahsinaparthib1@gmail.com' },
+    { name: 'Email', icon: '📧', url: 'mailto:tahsinaparthib1@gmail.com' },
   ]
 
   return (

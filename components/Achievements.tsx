@@ -5,32 +5,36 @@ import { motion } from 'framer-motion'
 const Achievements = () => {
   const achievements = [
     {
-      title: 'Codeforces Expert',
-      description: 'Achieved Expert rating on Codeforces competitive programming platform',
-      icon: '🏆',
-      date: '2024',
-      category: 'Competitive Programming',
+      title: 'TryHackMe Progress – tahsinaparthib1',
+      description:
+        'Actively working through red-team and web security learning paths on TryHackMe under the handle "tahsinaparthib1".',
+      icon: '🔥',
+      date: '2025',
+      category: 'Labs',
     },
     {
-      title: 'Hackathon Winner',
-      description: 'First place in regional hackathon competition',
-      icon: '🥇',
-      date: '2024',
-      category: 'Hackathon',
+      title: 'First Hack The Box Machines – tahsinaparthib',
+      description:
+        'Rooting beginner Hack The Box machines as "tahsinaparthib", focusing on clean methodology from recon to privilege escalation.',
+      icon: '🏁',
+      date: '2025',
+      category: 'CTF / Labs',
     },
     {
-      title: 'Open Source Contributor',
-      description: 'Contributed to major open source projects',
-      icon: '⭐',
-      date: '2024',
-      category: 'Open Source',
+      title: 'Security Notes & Writeups',
+      description:
+        'Started building private writeups and notes for each lab on TryHackMe and Hack The Box to solidify concepts.',
+      icon: '📝',
+      date: '2025',
+      category: 'Learning',
     },
     {
-      title: 'Certification',
-      description: 'Completed advanced web development certification',
-      icon: '📜',
-      date: '2024',
-      category: 'Certification',
+      title: 'Red Team Learning Roadmap',
+      description:
+        'Created a personal roadmap focusing on networking, Linux, web app security, and scripting as a path to junior red team roles.',
+      icon: '📚',
+      date: '2025',
+      category: 'Planning',
     },
   ]
 

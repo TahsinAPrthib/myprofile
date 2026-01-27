@@ -5,48 +5,45 @@ import { motion } from 'framer-motion'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: '🛒',
+      title: 'TryHackMe Red Team Journey',
+      description:
+        'Tracking my progress through red-team–focused TryHackMe rooms, including enumeration, exploitation, and post-exploitation labs, with structured notes and screenshots.',
+      technologies: ['TryHackMe', 'Kali Linux', 'Nmap', 'Burp Suite'],
+      image: '🧪',
+      link: 'https://tryhackme.com/p/tahsinaparthib1',
+      github: '#',
+    },
+    {
+      title: 'Hack The Box Beginner Lab Notes',
+      description:
+        'Solving beginner Hack The Box machines to build fundamentals in recon, web exploitation, and privilege escalation, documenting each step for future reference.',
+      technologies: ['Hack The Box', 'Linux', 'Nmap', 'Enum Tools'],
+      image: '📦',
+      link: 'https://app.hackthebox.com/profile/tahsinaparthib',
+      github: '#',
+    },
+    {
+      title: 'Web Attack Cheat Sheet (In Progress)',
+      description:
+        'A growing personal cheat sheet of common web attacks (XSS, SQLi, LFI, auth bypass) with example payloads, detection tips, and basic mitigation ideas.',
+      technologies: ['OWASP', 'Burp Suite', 'Notes', 'Markdown'],
+      image: '🛠️',
       link: '#',
       github: '#',
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates and team collaboration features.',
-      technologies: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind'],
-      image: '📋',
+      title: 'Linux Privilege Escalation Practice',
+      description:
+        'Practice environment and notes for Linux privilege escalation techniques, including SUID abuse, misconfigured services, and weak permissions.',
+      technologies: ['Linux', 'Bash', 'GTFOBins', 'Notes'],
+      image: '🐧',
       link: '#',
       github: '#',
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts and interactive maps.',
-      technologies: ['React', 'API Integration', 'Chart.js', 'CSS3'],
-      image: '🌤️',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'Analytics platform for tracking social media performance with detailed insights and reports.',
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'D3.js'],
-      image: '📊',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Learning Management System',
-      description: 'An educational platform for online courses with video streaming and progress tracking.',
-      technologies: ['React', 'Express', 'AWS S3', 'MongoDB'],
-      image: '🎓',
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website showcasing projects and skills with smooth animations.',
+      title: 'Security-Focused Portfolio',
+      description:
+        'This portfolio, built to present my red team learning journey, projects, and platforms in a clear and professional way.',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       image: '💼',
       link: '#',
@@ -69,7 +66,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            A collection of projects I've worked on, showcasing my skills and experience
+            A collection of security-focused projects and labs that showcase my red team learning journey
           </p>
         </motion.div>
 

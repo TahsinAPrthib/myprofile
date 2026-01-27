@@ -48,34 +48,35 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-gray-900">Who I Am</h3>
             <p className="text-gray-600 leading-relaxed">
-              I'm a passionate developer with a love for creating innovative solutions 
-              and bringing ideas to life. With experience in modern web technologies, 
-              I enjoy building applications that make a difference.
+              I&apos;m an aspiring red teamer, currently building my foundations in cybersecurity.
+              I focus on understanding how attackers find and exploit weaknesses in web
+              applications, networks, and systems, so I can think like an attacker and
+              document clear remediation steps.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              My journey in tech started with curiosity and has evolved into a career 
-              where I continuously learn and adapt to new challenges. I believe in writing 
-              clean, maintainable code and creating user experiences that are both beautiful 
-              and functional.
+              Right now I&apos;m actively learning through hands-on labs on TryHackMe and Hack The Box,
+              breaking intentionally vulnerable machines, and taking detailed notes as I go.
+              I&apos;m still at the beginning of my journey, but I&apos;m consistent, curious, and focused
+              on improving every week.
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">What I Do</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">What I Do Now</h4>
                 <ul className="text-gray-600 space-y-1 text-sm">
-                  <li>• Full Stack Development</li>
-                  <li>• UI/UX Design</li>
-                  <li>• Problem Solving</li>
-                  <li>• Code Optimization</li>
+                  <li>• TryHackMe &amp; Hack The Box labs</li>
+                  <li>• Web app &amp; Linux privilege escalation practice</li>
+                  <li>• Basic reconnaissance &amp; exploitation workflows</li>
+                  <li>• Documenting techniques and commands</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">What I Want To Do</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">What I&apos;m Aiming For</h4>
                 <ul className="text-gray-600 space-y-1 text-sm">
-                  <li>• Build Scalable Systems</li>
-                  <li>• Contribute to Open Source</li>
-                  <li>• Mentor Others</li>
-                  <li>• Learn New Technologies</li>
+                  <li>• Junior red team / pentest roles</li>
+                  <li>• Strong web exploitation fundamentals</li>
+                  <li>• Solid OSCP-style methodology</li>
+                  <li>• Sharing CTF &amp; lab writeups</li>
                 </ul>
               </div>
             </div>
