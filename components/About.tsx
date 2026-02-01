@@ -48,16 +48,13 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-gray-900">Who I Am</h3>
             <p className="text-gray-600 leading-relaxed">
-              I&apos;m an aspiring red teamer, currently building my foundations in cybersecurity.
-              I focus on understanding how attackers find and exploit weaknesses in web
-              applications, networks, and systems, so I can think like an attacker and
-              document clear remediation steps.
+              I&apos;m an aspiring red teamer, building my foundations in cybersecurity.
+              I focus on understanding how attackers find and exploit weaknesses in web applications, networks, and systems, and on documenting clear remediation steps.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Right now I&apos;m actively learning through hands-on labs on TryHackMe and Hack The Box,
               breaking intentionally vulnerable machines, and taking detailed notes as I go.
-              I&apos;m still at the beginning of my journey, but I&apos;m consistent, curious, and focused
-              on improving every week.
+              I&apos;m consistent, curious, and focused on improving every week.
             </p>
             
             <div className="grid grid-cols-2 gap-4 pt-4">

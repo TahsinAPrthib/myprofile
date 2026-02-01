@@ -9,6 +9,7 @@ const Skills = () => {
       skills: [
         { name: 'Recon & Enumeration', level: 50 },
         { name: 'Web App Weaknesses (OWASP)', level: 45 },
+        { name: 'Computer Networks', level: 50 },
         { name: 'Linux Privilege Escalation (Labs)', level: 40 },
         { name: 'Password & Brute Force Basics', level: 40 },
       ],
