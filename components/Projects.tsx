@@ -52,23 +52,9 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">My Projects</span>
-          </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            A collection of security-focused projects and labs that showcase my red team learning journey
-          </p>
-        </motion.div>
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -78,19 +64,19 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group"
             >
-              <div className="bg-gradient-to-br from-primary-100 to-primary-200 h-48 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/40 dark:to-primary-800/40 h-48 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">
                 {project.image}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{project.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium"
+                      className="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-xs rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -101,7 +87,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 font-semibold text-sm flex items-center gap-1"
+                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold text-sm flex items-center gap-1"
                   >
                     Live Demo →
                   </a>
@@ -109,7 +95,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900 font-semibold text-sm flex items-center gap-1"
+                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-semibold text-sm flex items-center gap-1"
                   >
                     GitHub →
                   </a>

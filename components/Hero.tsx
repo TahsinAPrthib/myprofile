@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -30,25 +31,7 @@ const Hero = () => {
           >
             Aspiring Red Teamer | Web App Security Learner | CTF Player
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex gap-4 justify-center flex-wrap"
-          >
-            <a
-              href="#projects"
-              className="px-8 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
-            >
-              Get In Touch
-            </a>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>
