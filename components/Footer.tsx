@@ -2,13 +2,23 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-400 py-6 text-center text-sm transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p>© {new Date().getFullYear()} Tahsin - A - Parthib. All rights reserved.</p>
+    <footer className="bg-t-background border-t border-t-border mt-margin">
+      <div className="max-w-container-max mx-auto px-margin py-gutter flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="font-mono text-label-sm uppercase tracking-widest text-t-text/50">
+          © {new Date().getFullYear()} TAHSIN - A - PARTHIB. ENCRYPTED_COMMUNICATION_ESTABLISHED.
+        </div>
+        <div className="flex space-x-6 font-mono text-label-sm uppercase tracking-widest">
+          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">GITHUB</a>
+          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">LINKEDIN</a>
+          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">TRYHACKME</a>
+          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">HTB</a>
+        </div>
       </div>
     </footer>
   )
 }
 
+
 export default Footer
+
 

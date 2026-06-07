@@ -10,37 +10,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        't-background': 'var(--background)',
+        't-surface': 'var(--surface)',
+        't-border': 'var(--border)',
+        't-text': 'var(--text)',
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          DEFAULT: 'var(--primary)',
+          accent: 'var(--primary)',
         },
       },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+      fontFamily: {
+        mono: ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
+      borderRadius: {
+        none: '0px',
+        DEFAULT: '0px',
+      },
+      spacing: {
+        margin: '40px',
+        gutter: '24px',
+        'container-max': '1140px',
+        unit: '4px',
+      },
+      fontSize: {
+        'headline-xl': ['48px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-lg': ['32px', { lineHeight: '1.2', fontWeight: '600' }],
+        'headline-md': ['24px', { lineHeight: '1.3', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+        'label-sm': ['12px', { lineHeight: '1.0', fontWeight: '500' }],
       },
     },
   },
   plugins: [],
 }
 export default config
-
-

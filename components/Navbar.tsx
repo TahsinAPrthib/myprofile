@@ -1,18 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    setMounted(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
@@ -21,73 +18,90 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { name: 'About', href: '/#about' },
-    { name: 'Academic', href: '/academic' },
-    { name: 'Skills', href: '/skills' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Achievements', href: '/achievements' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'HOME', href: '/' },
+    { name: 'ABOUT', href: '/#about' },
+    { name: 'ACADEMIC', href: '/academic' },
+    { name: 'SKILLS', href: '/skills' },
+    { name: 'PROJECTS', href: '/projects' },
+    { name: 'ACHIEVEMENTS', href: '/achievements' },
+    { name: 'CONTACT', href: '/contact' },
   ]
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+
+    <nav
+      className={`fixed top-0 w-full z-[100] transition-all duration-300 border-b ${
+        isScrolled || isMobileMenuOpen ? 'bg-t-background border-primary' : 'bg-t-background border-t-border'
       }`}
     >
-      <div className="w-full px-4 sm:px-8 lg:px-12">
-        <div className="flex justify-between items-start py-6">
-          <div className="hidden md:flex flex-col space-y-1">
-            {navItems.map((item) => (
+      <div className="max-w-container-max mx-auto px-6 py-4 flex justify-between items-center">
+        <Link 
+          href="/" 
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="font-mono text-body-md md:text-headline-md font-bold text-primary tracking-tighter z-[110] truncate mr-4"
+        >
+          TAHSIN.A.PARTHIB
+        </Link>
+        
+        <div className="hidden md:flex space-x-8 items-center">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href || (item.href.startsWith('/#') && pathname === '/')
+            return (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+                className={`font-mono text-label-sm tracking-widest transition-colors duration-200 hover:text-primary ${
+                  isActive 
+                    ? 'text-primary border-b-2 border-primary pb-1' 
+                    : 'text-t-text/70'
+                }`}
               >
+                {isActive && <span className="mr-1">&gt;</span>}
                 {item.name}
               </Link>
-            ))}
-          </div>
-          
-          <div className="flex items-start gap-6">
-            <div className="flex items-center gap-8 text-left">
-              <div className="relative w-[70px] h-[70px] rounded-full overflow-hidden border-2 border-primary-300 shadow-md shrink-0">
-                <Image
-                  src="/profile.jpg"
-                  alt="Profile"
-                  fill
-                  className="object-cover"
-                  sizes="70px"
-                />
-              </div>
-              <div className="flex flex-col items-start">
-                <span className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">Tahsin - A - Parthib</span>
-                <span className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">Aspiring Red Teamer | Web App Security Learner | CTF Player</span>
-              </div>
-            </div>
-
-            {mounted && (
-              <button
-                onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle Dark Mode"
-              >
-                {resolvedTheme === 'dark' ? '☀️' : '🌙'}
-              </button>
-            )}
-
-            <div className="md:hidden pt-2">
-              <button className="text-gray-700 dark:text-gray-300">☰</button>
-            </div>
-          </div>
+            )
+          })}
         </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden z-[110] flex-shrink-0">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 font-mono text-[10px] border border-primary text-primary bg-t-background"
+          >
+            {isMobileMenuOpen ? 'CLOSE' : 'MENU'}
+          </button>
+        </div>
+
+        {/* Mobile menu overlay */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 bg-t-background flex flex-col justify-center items-center space-y-6 z-[105] md:hidden overflow-y-auto pt-20">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href || (item.href.startsWith('/#') && pathname === '/')
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`font-mono text-headline-md tracking-widest transition-colors duration-200 hover:text-primary py-2 px-4 border-l-2 ${
+                    isActive ? 'text-primary border-primary bg-primary/10' : 'text-t-text/70 border-transparent'
+                  }`}
+                >
+                  {isActive && <span className="mr-2">&gt;</span>}
+                  {item.name}
+                </Link>
+              )
+            })}
+          </div>
+        )}
       </div>
-    </motion.nav>
+    </nav>
+
+
   )
 }
 
 export default Navbar
+
 
 

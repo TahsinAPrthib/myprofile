@@ -5,42 +5,45 @@ import { motion } from 'framer-motion'
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Red Team Basics',
+      title: 'RED_TEAM_FOUNDATIONS',
       skills: [
         { name: 'Recon & Enumeration', level: 50 },
-        { name: 'Web App Weaknesses (OWASP)', level: 45 },
-        { name: 'Computer Networks', level: 50 },
-        { name: 'Linux Privilege Escalation (Labs)', level: 40 },
-        { name: 'Password & Brute Force Basics', level: 40 },
+        { name: 'OWASP Top 10 Weaknesses', level: 45 },
+        { name: 'Network Protocol Analysis', level: 50 },
+        { name: 'Linux Privilege Escalation', level: 40 },
+        { name: 'Credential Access', level: 40 },
       ],
     },
     {
-      title: 'Tools & Platforms',
+      title: 'OPERATIONAL_TOOLS',
       skills: [
-        { name: 'Kali Linux', level: 50 },
-        { name: 'Nmap', level: 50 },
-        { name: 'Burp Suite (Basics)', level: 40 },
-        { name: 'TryHackMe', level: 60 },
+        { name: 'Kali Linux OS', level: 50 },
+        { name: 'Nmap Scanner', level: 50 },
+        { name: 'Burp Suite Community', level: 40 },
+        { name: 'TryHackMe Labs', level: 60 },
         { name: 'Hack The Box', level: 45 },
       ],
     },
     {
-      title: 'Programming & Scripting',
+      title: 'DEVELOPMENT_CLI',
       skills: [
-        { name: 'Python (small scripts)', level: 45 },
-        { name: 'Bash & Linux CLI', level: 50 },
-        { name: 'JavaScript / Web Basics', level: 55 },
-        { name: 'Note-taking & Reporting', level: 60 },
+        { name: 'Python Scripting', level: 45 },
+        { name: 'Bash & Shell Scripting', level: 50 },
+        { name: 'Web Fundamentals (JS/HTML)', level: 55 },
+        { name: 'Reporting & Markdown', level: 60 },
       ],
     },
   ]
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-gray-50 to-primary-50 dark:from-gray-950 dark:to-gray-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24">
+      <div className="max-w-container-max mx-auto px-margin">
+        <div className="mb-16 space-y-4">
+          <h2 className="font-mono text-headline-lg text-t-text uppercase">SKILL_MATRIX</h2>
+          <div className="w-24 h-1 bg-primary"></div>
+        </div>
 
-
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -48,25 +51,28 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-transparent dark:border-gray-700"
+              className="bg-t-surface border border-t-border p-8"
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
+              <h3 className="font-mono text-label-sm text-primary uppercase tracking-widest mb-8 border-b border-t-border pb-4">
                 {category.title}
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-8">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">{skill.level}%</span>
+                  <div key={skill.name} className="space-y-3">
+                    <div className="flex justify-between font-mono text-label-sm">
+                      <span className="text-t-text/70">{skill.name}</span>
+                      <span className="text-primary">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div className="w-full bg-t-border/20 h-4 border border-t-border p-[2px]">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                        className="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full"
+                        className="bg-primary h-full"
+                        style={{
+                          backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, #0A0A0A 4px, #0A0A0A 6px)'
+                        }}
                       />
                     </div>
                   </div>
@@ -81,4 +87,5 @@ const Skills = () => {
 }
 
 export default Skills
+
 

@@ -1,12 +1,26 @@
 import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const jetbrains = JetBrains_Mono({ 
+  subsets: ['latin'],
+  variable: '--font-jetbrains',
+})
+
 export const metadata: Metadata = {
-  title: 'Tahsin - A - Parthib',
-  description: 'Personal portfolio showcasing my projects, skills, and experience',
+  title: 'Tahsin - A - Parthib | Security Portfolio',
+  description: 'Minimalist-Brutalist portfolio of Tahsin A. Parthib, Aspiring Red Teamer.',
 }
+
+
+
 
 export default function RootLayout({
   children,
@@ -14,9 +28,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
+      <body className="bg-t-background text-t-text font-sans antialiased selection:bg-primary selection:text-t-background">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
+
           <Navbar />
           <main className="min-h-screen pt-24">
             {children}
@@ -26,5 +41,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-

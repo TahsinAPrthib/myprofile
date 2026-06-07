@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #0A0A0A;
+  --surface: #1A1A1A;
+  --border: #2A2A2A;
+  --text: #EDEDED;
+  --primary: #00FF41;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: var(--background);
+    color: var(--text);
   }
   
   body {
-    @apply bg-gray-50 text-gray-900;
+    background-color: var(--background);
+    color: var(--text);
+    @apply font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono;
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400;
+@layer components {
+  .terminal-border {
+    border: 1px solid var(--border);
+  }
+
+  .terminal-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    @apply p-6 transition-colors duration-200;
+  }
+  
+  .terminal-card:hover {
+    border-color: var(--primary);
   }
 }
-
-
