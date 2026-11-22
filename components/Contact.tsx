@@ -6,8 +6,7 @@ const Contact = () => {
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tahsin-a-parthib-b16723343/' },
     { name: 'GitHub', url: 'https://github.com/TahsinAPrthib' },
-    { name: 'TryHackMe', url: 'https://tryhackme.com/p/tahsinaparthib1' },
-    { name: 'Hack The Box', url: 'https://app.hackthebox.com/profile/tahsinaparthib' },
+    { name: 'pwn.college', url: 'https://pwn.college/hacker/172623' },
     { name: 'Codeforces', url: 'https://codeforces.com/profile/Tahsin-A-Parthib' },
     { name: 'Email', url: 'mailto:tahsinaparthib1@gmail.com' },
   ]

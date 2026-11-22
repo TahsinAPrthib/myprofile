@@ -42,13 +42,12 @@ const About = () => {
 
             <div className="space-y-6 font-sans text-body-lg text-t-text/80 leading-relaxed">
               <p>
-                I&apos;m an aspiring red teamer, building my foundations in cybersecurity.
-                I focus on understanding how attackers find and exploit weaknesses in web applications, networks, and systems, and on documenting clear remediation steps.
+                I&apos;m a third-year CSE student at United International University, expected to graduate in February 2028.
+                I build and ship full-stack web applications.
               </p>
               <p>
-                Right now I&apos;m actively learning through hands-on labs on TryHackMe and Hack The Box,
-                breaking intentionally vulnerable machines, and taking detailed notes as I go.
-                I&apos;m consistent, curious, and focused on improving every week.
+                On the security side, I completed pwn.college&apos;s Linux Luminarium in full: 128/128 challenges,
+                top 8% of 47,000+ participants.
               </p>
             </div>
             
@@ -58,19 +57,19 @@ const About = () => {
                 <ul className="text-t-text/60 space-y-3 text-body-md font-mono">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    TryHackMe &amp; Hack The Box labs
+                    Full-stack web apps (Next.js, PostgreSQL)
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Web app &amp; Linux privilege escalation practice
+                    CVE severity classification (NVD, EPSS)
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Basic reconnaissance &amp; exploitation workflows
+                    Linux privilege escalation
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Documenting techniques and commands
+                    Java desktop apps (JavaFX, SQLite)
                   </li>
                 </ul>
               </div>
@@ -79,19 +78,19 @@ const About = () => {
                 <ul className="text-t-text/60 space-y-3 text-body-md font-mono">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Junior red team / pentest roles
+                    Software engineering roles, full-stack or backend
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Strong web exploitation fundamentals
+                    Container and cloud infrastructure security
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Solid OSCP-style methodology
+                    Linux systems depth, continuing on pwn.college
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">_</span>
-                    Sharing CTF &amp; lab writeups
+                    Shipping projects end to end, build through deployment
                   </li>
                 </ul>
               </div>

@@ -2,35 +2,30 @@
 
 import { motion } from 'framer-motion'
 
+type Achievement = {
+  title: string
+  description: string
+  date: string
+  category: string
+  link?: string
+}
+
 const Achievements = () => {
-  const achievements = [
+  const achievements: Achievement[] = [
     {
-      title: 'TRYHACKME_PROGRESS_NODE',
+      title: 'PWN_COLLEGE_LINUX_LUMINARIUM',
       description:
-        'Actively working through red-team and web security learning paths on TryHackMe under the handle "tahsinaparthib1".',
-      date: '2025',
-      category: 'LABS',
+        'Completed the Linux Luminarium dojo in full, 128 of 128 challenges, ranking in the top 8% of 47,000+ participants. Covered SUID abuse, PATH hijacking, permission misconfigurations, process control and shell scripting.',
+      date: '2026',
+      category: 'SECURITY',
+      link: 'https://pwn.college/hacker/172623',
     },
     {
-      title: 'HTB_INITIAL_ROOTS',
+      title: 'UIU_CSE_PROJECT_SHOW',
       description:
-        'Rooting beginner Hack The Box machines as "tahsinaparthib", focusing on clean methodology from recon to privilege escalation.',
+        '2nd Runner-Up, UIU CSE Project Show, for Smart Drainage System (electronics project).',
       date: '2025',
-      category: 'CTF',
-    },
-    {
-      title: 'SECURITY_DATA_LOGGING',
-      description:
-        'Started building private writeups and notes for each lab on TryHackMe and Hack The Box to solidify concepts.',
-      date: '2025',
-      category: 'INTEL',
-    },
-    {
-      title: 'RED_TEAM_STRATEGIC_PLAN',
-      description:
-        'Created a personal roadmap focusing on networking, Linux, web app security, and scripting as a path to junior red team roles.',
-      date: '2025',
-      category: 'STRATEGY',
+      category: 'ELECTRONICS',
     },
   ]
 
@@ -38,7 +33,7 @@ const Achievements = () => {
     <section id="achievements" className="py-24">
       <div className="max-w-container-max mx-auto px-margin">
         <div className="mb-16 space-y-4">
-          <h2 className="font-mono text-headline-lg text-t-text uppercase tracking-tight">VERIFIED_RECORDS</h2>
+          <h2 className="font-mono text-headline-lg text-t-text uppercase tracking-tight">ACHIEVEMENTS</h2>
           <div className="w-24 h-1 bg-primary"></div>
         </div>
 
@@ -69,10 +64,18 @@ const Achievements = () => {
                 <p className="font-sans text-body-md text-t-text/60 max-w-2xl">
                   {achievement.description}
                 </p>
-              </div>
-
-              <div className="hidden md:block font-mono text-[10px] text-t-text/20 uppercase tracking-[0.3em] vertical-text">
-                LOG_ENTRY_VALID
+                {achievement.link && (
+                  <div className="pt-2">
+                    <a
+                      href={achievement.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-label-sm text-primary hover:underline underline-offset-8 transition-all"
+                    >
+                      VIEW_PROFILE &gt;
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

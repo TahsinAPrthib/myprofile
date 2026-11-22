@@ -28,7 +28,7 @@ const Hero = () => {
             
             <div className="font-mono text-headline-lg text-t-text/70 break-words leading-tight">
               I am Tahsin A. Parthib.<br/>
-              <span className="text-primary underline underline-offset-8">Aspiring Red Teamer</span> | Web App Security Learner | CTF Player.
+              <span className="text-primary underline underline-offset-8">Full-Stack Developer | Security &amp; Infrastructure</span>.
             </div>
             
             <div className="font-sans text-body-lg text-t-text/90 max-w-3xl mt-8 border-l-2 border-primary/30 pl-6 py-2 italic">

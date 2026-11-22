@@ -8,10 +8,9 @@ const Footer = () => {
           © {new Date().getFullYear()} TAHSIN - A - PARTHIB. ENCRYPTED_COMMUNICATION_ESTABLISHED.
         </div>
         <div className="flex space-x-6 font-mono text-label-sm uppercase tracking-widest">
-          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">GITHUB</a>
-          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">LINKEDIN</a>
-          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">TRYHACKME</a>
-          <a href="#" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">HTB</a>
+          <a href="https://github.com/TahsinAPrthib" target="_blank" rel="noopener noreferrer" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">GITHUB</a>
+          <a href="https://www.linkedin.com/in/tahsin-a-parthib-b16723343/" target="_blank" rel="noopener noreferrer" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">LINKEDIN</a>
+          <a href="https://pwn.college/hacker/172623" target="_blank" rel="noopener noreferrer" className="text-t-text/70 hover:text-primary underline underline-offset-4 transition-all duration-300">PWN.COLLEGE</a>
         </div>
       </div>
     </footer>

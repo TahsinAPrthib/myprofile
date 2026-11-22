@@ -74,11 +74,6 @@ const AcademicBackground = () => {
                 </ul>
               </div>
             </div>
-
-            <div className="pt-10 border-t border-t-border flex justify-between items-center opacity-30">
-              <div className="font-mono text-[10px] tracking-widest uppercase">System: UIU_NODE_VERIFIED</div>
-              <div className="font-mono text-[10px] tracking-widest uppercase">Encryption: AES-256-GCM</div>
-            </div>
           </div>
         </motion.div>
       </div>

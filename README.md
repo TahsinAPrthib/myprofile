@@ -51,7 +51,7 @@ npm run dev
    - Update your bio and what you do
 
 3. **Skills Section** (`components/Skills.tsx`):
-   - Update skill categories and proficiency levels
+   - Update skill categories and their skill tags
 
 4. **Projects Section** (`components/Projects.tsx`):
    - Replace placeholder projects with your actual projects

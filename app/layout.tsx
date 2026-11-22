@@ -16,7 +16,7 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Tahsin - A - Parthib | Security Portfolio',
-  description: 'Minimalist-Brutalist portfolio of Tahsin A. Parthib, Aspiring Red Teamer.',
+  description: 'Minimalist-Brutalist portfolio of Tahsin A. Parthib, Full-Stack Developer | Security & Infrastructure.',
 }
 
 

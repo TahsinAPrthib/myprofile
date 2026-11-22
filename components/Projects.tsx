@@ -2,47 +2,44 @@
 
 import { motion } from 'framer-motion'
 
+type Project = {
+  title: string
+  description: string
+  technologies: string[]
+  link?: string
+  github: string
+}
+
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
-      title: 'THM_RED_TEAM_JOURNEY',
+      title: 'BOI_MOHOL',
       description:
-        'Tracking my progress through red-team–focused TryHackMe rooms, including enumeration, exploitation, and post-exploitation labs, with structured notes and screenshots.',
-      technologies: ['TryHackMe', 'Kali Linux', 'Nmap', 'Burp Suite'],
-      link: 'https://tryhackme.com/p/tahsinaparthib1',
-      github: '#',
+        'Bangla-language book platform for reading, reviews and book exchange. Catalogue of 35,000+ public-domain titles, per-listing private chat, admin moderation tools, Google OAuth sign-in, Cloudinary image uploads, Bangla-aware search. 21 data models across 22 schema migrations. Deployed on Vercel with managed PostgreSQL.',
+      technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth', 'Tailwind'],
+      link: 'https://boimohol-delta.vercel.app',
+      github: 'https://github.com/TahsinAPrthib/Boimohol',
     },
     {
-      title: 'HTB_LAB_METHODOLOGY',
+      title: 'CVE_SEVERITY_MONITOR',
       description:
-        'Solving beginner Hack The Box machines to build fundamentals in recon, web exploitation, and privilege escalation, documenting each step for future reference.',
-      technologies: ['Hack The Box', 'Linux', 'Nmap', 'Enum Tools'],
-      link: 'https://app.hackthebox.com/profile/tahsinaparthib',
-      github: '#',
+        'Pipeline that pulls CVE records from the NIST NVD API v2.0 and enriches them with FIRST.org EPSS exploit-probability scores. Compares five scikit-learn classifiers (Naive Bayes, Decision Tree, Random Forest, AdaBoost, SVM) for 4-class severity classification. Flask REST API with single and batch endpoints, plus a background service that polls NVD every 6 hours and logs High/Critical findings to SQLite.',
+      technologies: ['Python', 'scikit-learn', 'pandas', 'Flask', 'SQLite', 'Docker'],
+      github: 'https://github.com/TahsinAPrthib/AI-Powered-Vulnerability-Scanner',
     },
     {
-      title: 'WEB_ATTACK_CHEAT_SHEET',
+      title: 'IMAN_CONNECT',
       description:
-        'A growing personal cheat sheet of common web attacks (XSS, SQLi, LFI, auth bypass) with example payloads, detection tips, and basic mitigation ideas.',
-      technologies: ['OWASP', 'Burp Suite', 'Notes', 'Markdown'],
-      link: '#',
-      github: '#',
+        'Java desktop application for prayer, Quran, Ramadan and dhikr tracking, with a Q&A module where registered scholars answer user-submitted questions. 27 controllers and 14 domain models in an MVC structure, pooled SQLite connections, role-based accounts for users, scholars and administrators. Group course project.',
+      technologies: ['Java 17', 'JavaFX', 'Maven', 'SQLite', 'HikariCP'],
+      github: 'https://github.com/TahsinAPrthib/Iman-connect',
     },
     {
-      title: 'LINUX_PRIV_ESC_PRACTICE',
+      title: 'GRADIENT',
       description:
-        'Practice environment and notes for Linux privilege escalation techniques, including SUID abuse, misconfigured services, and weak permissions.',
-      technologies: ['Linux', 'Bash', 'GTFOBins', 'Notes'],
-      link: '#',
-      github: '#',
-    },
-    {
-      title: 'TERMINAL_ELITE_PORTFOLIO',
-      description:
-        'This portfolio, built to present my red team learning journey, projects, and platforms in a clear and professional way.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      link: '#',
-      github: '#',
+        'Student-alumni mentorship and referral platform. Authentication, 7 data models, 12 application routes.',
+      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
+      github: 'https://github.com/TahsinAPrthib/Gradient',
     },
   ]
 
@@ -89,14 +86,16 @@ const Projects = () => {
                 </div>
 
                 <div className="pt-6 border-t border-t-border flex gap-8">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-label-sm text-primary hover:underline underline-offset-8 transition-all"
-                  >
-                    RUN_LIVE_DEMO &gt;
-                  </a>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-label-sm text-primary hover:underline underline-offset-8 transition-all"
+                    >
+                      RUN_LIVE_DEMO &gt;
+                    </a>
+                  )}
                   <a
                     href={project.github}
                     target="_blank"
